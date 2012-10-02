@@ -10,7 +10,9 @@
 #import <Social/Social.h>
 #import "SSWViewController.h"
 
-@interface SSWViewController ()
+@interface SSWViewController () <UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *result;
 
 @end
 
@@ -31,10 +33,10 @@
 - (IBAction)saySomething:(id)sender {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo]) {
         SLComposeViewController *composeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
-        [composeViewController setInitialText:@"无痛呻吟几下吧。iOS 6 微博集成示例。"];
+        [composeViewController setInitialText:@"iOS 6 微博集成示例代码。"];
         [composeViewController addURL:[NSURL URLWithString:@"https://github.com/ashchan/SocialSinaWeibo"]];
         [composeViewController setCompletionHandler:^(SLComposeViewControllerResult result) {
-            // check result
+            self.result.text = SLComposeViewControllerResultDone == result ? @"Sent" : @"Canceled";
         }];
 
         [self presentViewController:composeViewController animated:YES completion:nil];
@@ -42,28 +44,40 @@
 }
 
 - (IBAction)postComment:(id)sender {
-    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
-    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierSinaWeibo];
-    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
-        if (!granted) {
-            return;
-        }
-
-        NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/comments/create.json"];
-        NSDictionary *params = @{
-            @"id":          @"3496696657222748",
-            @"comment":     @"再次测试评论"
-        };
-
-        SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeSinaWeibo requestMethod:SLRequestMethodPOST URL:url parameters:params];
-        request.account = [[accountStore accountsWithAccountType:accountType] lastObject];
-
-        [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-            NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-            // check result
-        }];
-    }];
+    UIAlertView *commentInput = [[UIAlertView alloc] initWithTitle:@"Input Comment"
+                                                           message:@"Post comment to one of my status"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Cancel"
+                                                 otherButtonTitles:@"Post", nil];
+    commentInput.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [commentInput show];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+        ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierSinaWeibo];
+        [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+            if (!granted) {
+                self.result.text = @"Permission not granted";
+                return;
+            }
+
+            NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/comments/create.json"];
+            NSDictionary *params = @{
+                @"id":          @"3496707910508896",
+                @"comment":     [alertView textFieldAtIndex:0].text
+            };
+
+            SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeSinaWeibo requestMethod:SLRequestMethodPOST URL:url parameters:params];
+            request.account = [[accountStore accountsWithAccountType:accountType] lastObject];
+
+            [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+                NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+                self.result.text = [@"Post comment result: " stringByAppendingString:response];
+            }];
+        }];
+    }
+}
 
 @end
