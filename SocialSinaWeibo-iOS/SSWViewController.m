@@ -41,6 +41,29 @@
     }
 }
 
-//3496696657222748
+- (IBAction)postComment:(id)sender {
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierSinaWeibo];
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+        if (!granted) {
+            return;
+        }
+
+        NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/comments/create.json"];
+        NSDictionary *params = @{
+            @"id":          @"3496696657222748",
+            @"comment":     @"再次测试评论"
+        };
+
+        SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeSinaWeibo requestMethod:SLRequestMethodPOST URL:url parameters:params];
+        request.account = [[accountStore accountsWithAccountType:accountType] lastObject];
+
+        [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+            NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+            // check result
+        }];
+    }];
+}
+
 
 @end
