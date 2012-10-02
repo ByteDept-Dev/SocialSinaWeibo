@@ -24,6 +24,8 @@
 		1AD17A96161ABC8A00BEC5EC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A95161ABC8A00BEC5EC /* Default-568h@2x.png */; };
 		1AD17A99161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A97161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard */; };
 		1AD17A9F161ABC8A00BEC5EC /* SSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17A9E161ABC8A00BEC5EC /* SSWViewController.m */; };
+		1AD17AA5161ABF6C00BEC5EC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD17AA4161ABF6C00BEC5EC /* Social.framework */; };
+		1AD17AA7161ABF7200BEC5EC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD17AA6161ABF7200BEC5EC /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		1AD17A98161ABC8A00BEC5EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1AD17A9D161ABC8A00BEC5EC /* SSWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWViewController.h; sourceTree = "<group>"; };
 		1AD17A9E161ABC8A00BEC5EC /* SSWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWViewController.m; sourceTree = "<group>"; };
+		1AD17AA4161ABF6C00BEC5EC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		1AD17AA6161ABF7200BEC5EC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD17AA7161ABF7200BEC5EC /* Accounts.framework in Frameworks */,
+				1AD17AA5161ABF6C00BEC5EC /* Social.framework in Frameworks */,
 				1AD17A80161ABC8A00BEC5EC /* UIKit.framework in Frameworks */,
 				1AD17A82161ABC8A00BEC5EC /* Foundation.framework in Frameworks */,
 				1AD17A84161ABC8A00BEC5EC /* CoreGraphics.framework in Frameworks */,
@@ -102,10 +108,8 @@
 		1AD17A57161ABC2500BEC5EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1AD17A58161ABC2500BEC5EC /* Cocoa.framework */,
-				1AD17A7F161ABC8A00BEC5EC /* UIKit.framework */,
-				1AD17A81161ABC8A00BEC5EC /* Foundation.framework */,
-				1AD17A83161ABC8A00BEC5EC /* CoreGraphics.framework */,
+				1AD17AA9161ABFD500BEC5EC /* Mac */,
+				1AD17AA8161ABFA400BEC5EC /* iOS */,
 				1AD17A5A161ABC2500BEC5EC /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -114,7 +118,6 @@
 		1AD17A5A161ABC2500BEC5EC /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1AD17A5B161ABC2500BEC5EC /* AppKit.framework */,
 				1AD17A5C161ABC2500BEC5EC /* CoreData.framework */,
 				1AD17A5D161ABC2500BEC5EC /* Foundation.framework */,
 			);
@@ -169,6 +172,27 @@
 				1AD17A95161ABC8A00BEC5EC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AD17AA8161ABFA400BEC5EC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1AD17A7F161ABC8A00BEC5EC /* UIKit.framework */,
+				1AD17A81161ABC8A00BEC5EC /* Foundation.framework */,
+				1AD17A83161ABC8A00BEC5EC /* CoreGraphics.framework */,
+				1AD17AA6161ABF7200BEC5EC /* Accounts.framework */,
+				1AD17AA4161ABF6C00BEC5EC /* Social.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1AD17AA9161ABFD500BEC5EC /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				1AD17A58161ABC2500BEC5EC /* Cocoa.framework */,
+				1AD17A5B161ABC2500BEC5EC /* AppKit.framework */,
+			);
+			name = Mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
