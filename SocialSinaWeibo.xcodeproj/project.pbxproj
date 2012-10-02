@@ -13,6 +13,17 @@
 		1AD17A69161ABC2500BEC5EC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A67161ABC2500BEC5EC /* Credits.rtf */; };
 		1AD17A6C161ABC2500BEC5EC /* SSWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17A6B161ABC2500BEC5EC /* SSWAppDelegate.m */; };
 		1AD17A6F161ABC2500BEC5EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A6D161ABC2500BEC5EC /* MainMenu.xib */; };
+		1AD17A80161ABC8A00BEC5EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD17A7F161ABC8A00BEC5EC /* UIKit.framework */; };
+		1AD17A82161ABC8A00BEC5EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD17A81161ABC8A00BEC5EC /* Foundation.framework */; };
+		1AD17A84161ABC8A00BEC5EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD17A83161ABC8A00BEC5EC /* CoreGraphics.framework */; };
+		1AD17A8A161ABC8A00BEC5EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A88161ABC8A00BEC5EC /* InfoPlist.strings */; };
+		1AD17A8C161ABC8A00BEC5EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17A8B161ABC8A00BEC5EC /* main.m */; };
+		1AD17A90161ABC8A00BEC5EC /* SSWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17A8F161ABC8A00BEC5EC /* SSWAppDelegate.m */; };
+		1AD17A92161ABC8A00BEC5EC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A91161ABC8A00BEC5EC /* Default.png */; };
+		1AD17A94161ABC8A00BEC5EC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A93161ABC8A00BEC5EC /* Default@2x.png */; };
+		1AD17A96161ABC8A00BEC5EC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A95161ABC8A00BEC5EC /* Default-568h@2x.png */; };
+		1AD17A99161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17A97161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard */; };
+		1AD17A9F161ABC8A00BEC5EC /* SSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17A9E161ABC8A00BEC5EC /* SSWViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +40,22 @@
 		1AD17A6A161ABC2500BEC5EC /* SSWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWAppDelegate.h; sourceTree = "<group>"; };
 		1AD17A6B161ABC2500BEC5EC /* SSWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWAppDelegate.m; sourceTree = "<group>"; };
 		1AD17A6E161ABC2500BEC5EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1AD17A7D161ABC8A00BEC5EC /* SocialSinaWeibo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialSinaWeibo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD17A7F161ABC8A00BEC5EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1AD17A81161ABC8A00BEC5EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1AD17A83161ABC8A00BEC5EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		1AD17A87161ABC8A00BEC5EC /* SocialSinaWeibo-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialSinaWeibo-iOS-Info.plist"; sourceTree = "<group>"; };
+		1AD17A89161ABC8A00BEC5EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AD17A8B161ABC8A00BEC5EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AD17A8D161ABC8A00BEC5EC /* SocialSinaWeibo-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialSinaWeibo-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		1AD17A8E161ABC8A00BEC5EC /* SSWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWAppDelegate.h; sourceTree = "<group>"; };
+		1AD17A8F161ABC8A00BEC5EC /* SSWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWAppDelegate.m; sourceTree = "<group>"; };
+		1AD17A91161ABC8A00BEC5EC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1AD17A93161ABC8A00BEC5EC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1AD17A95161ABC8A00BEC5EC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1AD17A98161ABC8A00BEC5EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1AD17A9D161ABC8A00BEC5EC /* SSWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWViewController.h; sourceTree = "<group>"; };
+		1AD17A9E161ABC8A00BEC5EC /* SSWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +67,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AD17A7A161ABC8A00BEC5EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD17A80161ABC8A00BEC5EC /* UIKit.framework in Frameworks */,
+				1AD17A82161ABC8A00BEC5EC /* Foundation.framework in Frameworks */,
+				1AD17A84161ABC8A00BEC5EC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1AD17A5E161ABC2500BEC5EC /* SocialSinaWeibo */,
+				1AD17A85161ABC8A00BEC5EC /* SocialSinaWeibo-iOS */,
 				1AD17A57161ABC2500BEC5EC /* Frameworks */,
 				1AD17A55161ABC2500BEC5EC /* Products */,
 			);
@@ -56,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1AD17A54161ABC2500BEC5EC /* SocialSinaWeibo.app */,
+				1AD17A7D161ABC8A00BEC5EC /* SocialSinaWeibo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				1AD17A58161ABC2500BEC5EC /* Cocoa.framework */,
+				1AD17A7F161ABC8A00BEC5EC /* UIKit.framework */,
+				1AD17A81161ABC8A00BEC5EC /* Foundation.framework */,
+				1AD17A83161ABC8A00BEC5EC /* CoreGraphics.framework */,
 				1AD17A5A161ABC2500BEC5EC /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -102,6 +144,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1AD17A85161ABC8A00BEC5EC /* SocialSinaWeibo-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1AD17A8E161ABC8A00BEC5EC /* SSWAppDelegate.h */,
+				1AD17A8F161ABC8A00BEC5EC /* SSWAppDelegate.m */,
+				1AD17A97161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard */,
+				1AD17A9D161ABC8A00BEC5EC /* SSWViewController.h */,
+				1AD17A9E161ABC8A00BEC5EC /* SSWViewController.m */,
+				1AD17A86161ABC8A00BEC5EC /* Supporting Files */,
+			);
+			path = "SocialSinaWeibo-iOS";
+			sourceTree = "<group>";
+		};
+		1AD17A86161ABC8A00BEC5EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AD17A87161ABC8A00BEC5EC /* SocialSinaWeibo-iOS-Info.plist */,
+				1AD17A88161ABC8A00BEC5EC /* InfoPlist.strings */,
+				1AD17A8B161ABC8A00BEC5EC /* main.m */,
+				1AD17A8D161ABC8A00BEC5EC /* SocialSinaWeibo-iOS-Prefix.pch */,
+				1AD17A91161ABC8A00BEC5EC /* Default.png */,
+				1AD17A93161ABC8A00BEC5EC /* Default@2x.png */,
+				1AD17A95161ABC8A00BEC5EC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +189,23 @@
 			name = SocialSinaWeibo;
 			productName = SocialSinaWeibo;
 			productReference = 1AD17A54161ABC2500BEC5EC /* SocialSinaWeibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1AD17A7C161ABC8A00BEC5EC /* SocialSinaWeibo-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD17AA2161ABC8A00BEC5EC /* Build configuration list for PBXNativeTarget "SocialSinaWeibo-iOS" */;
+			buildPhases = (
+				1AD17A79161ABC8A00BEC5EC /* Sources */,
+				1AD17A7A161ABC8A00BEC5EC /* Frameworks */,
+				1AD17A7B161ABC8A00BEC5EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SocialSinaWeibo-iOS";
+			productName = "SocialSinaWeibo-iOS";
+			productReference = 1AD17A7D161ABC8A00BEC5EC /* SocialSinaWeibo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				1AD17A53161ABC2500BEC5EC /* SocialSinaWeibo */,
+				1AD17A7C161ABC8A00BEC5EC /* SocialSinaWeibo-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +247,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AD17A7B161ABC8A00BEC5EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD17A8A161ABC8A00BEC5EC /* InfoPlist.strings in Resources */,
+				1AD17A92161ABC8A00BEC5EC /* Default.png in Resources */,
+				1AD17A94161ABC8A00BEC5EC /* Default@2x.png in Resources */,
+				1AD17A96161ABC8A00BEC5EC /* Default-568h@2x.png in Resources */,
+				1AD17A99161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -169,6 +268,16 @@
 			files = (
 				1AD17A65161ABC2500BEC5EC /* main.m in Sources */,
 				1AD17A6C161ABC2500BEC5EC /* SSWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD17A79161ABC8A00BEC5EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD17A8C161ABC8A00BEC5EC /* main.m in Sources */,
+				1AD17A90161ABC8A00BEC5EC /* SSWAppDelegate.m in Sources */,
+				1AD17A9F161ABC8A00BEC5EC /* SSWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +306,22 @@
 				1AD17A6E161ABC2500BEC5EC /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1AD17A88161ABC8A00BEC5EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD17A89161ABC8A00BEC5EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1AD17A97161ABC8A00BEC5EC /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD17A98161ABC8A00BEC5EC /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,6 +387,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialSinaWeibo/SocialSinaWeibo-Prefix.pch";
 				INFOPLIST_FILE = "SocialSinaWeibo/SocialSinaWeibo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,7 +400,48 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialSinaWeibo/SocialSinaWeibo-Prefix.pch";
 				INFOPLIST_FILE = "SocialSinaWeibo/SocialSinaWeibo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1AD17AA0161ABC8A00BEC5EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialSinaWeibo-iOS/SocialSinaWeibo-iOS-Prefix.pch";
+				INFOPLIST_FILE = "SocialSinaWeibo-iOS/SocialSinaWeibo-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AD17AA1161ABC8A00BEC5EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialSinaWeibo-iOS/SocialSinaWeibo-iOS-Prefix.pch";
+				INFOPLIST_FILE = "SocialSinaWeibo-iOS/SocialSinaWeibo-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -296,6 +463,15 @@
 			buildConfigurations = (
 				1AD17A73161ABC2500BEC5EC /* Debug */,
 				1AD17A74161ABC2500BEC5EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD17AA2161ABC8A00BEC5EC /* Build configuration list for PBXNativeTarget "SocialSinaWeibo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD17AA0161ABC8A00BEC5EC /* Debug */,
+				1AD17AA1161ABC8A00BEC5EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
