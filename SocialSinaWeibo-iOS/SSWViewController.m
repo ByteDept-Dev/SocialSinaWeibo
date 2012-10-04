@@ -35,8 +35,10 @@
         SLComposeViewController *composeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
         [composeViewController setInitialText:@"iOS 6 微博集成示例代码。"];
         [composeViewController addURL:[NSURL URLWithString:@"https://github.com/ashchan/SocialSinaWeibo"]];
+        __block SLComposeViewController *weakComposeVC = composeViewController;
         [composeViewController setCompletionHandler:^(SLComposeViewControllerResult result) {
             self.result.text = SLComposeViewControllerResultDone == result ? @"Sent" : @"Canceled";
+            [weakComposeVC dismissViewControllerAnimated:YES completion:nil];
         }];
 
         [self presentViewController:composeViewController animated:YES completion:nil];
