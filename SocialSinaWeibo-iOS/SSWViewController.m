@@ -75,8 +75,10 @@
             request.account = [[accountStore accountsWithAccountType:accountType] lastObject];
 
             [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-                NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-                self.result.text = [@"Post comment result: " stringByAppendingString:response];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+                    self.result.text = [@"Post comment result: " stringByAppendingString:response];
+                });
             }];
         }];
     }
